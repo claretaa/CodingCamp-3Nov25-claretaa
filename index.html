@@ -3,16 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bloom & Bold</title>
 
-    <linnk rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <header></header>
-    <nav></nav>
 
-    <main></main>
-    <footer></footer>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            
+            <div class="brand-wrapper">
+                <div class="logo"></div>
+                <div class="brand-name">Bloom & Bold</div>
+            </div>
+
+            <nav class="flex gap-1">
+                <a class="border rounded-full px-6 py-2" href="#home-page" style="background-color:#A5B68D; color:white; border-color: #A5B68D;">Home</a>
+                <a class="border rounded-full px-6 py-2" href="#our-profile-page" style="background-color:#A5B68D; color:white; border-color: #A5B68D;">Our Profile</a>
+                <a class="border rounded-full px-6 py-2" href="#products-page" style="background-color:#A5B68D; color:white; border-color: #A5B68D;">Our Products</a>
+                <a class="border rounded-full px-6 py-2" href="#message-us-page" style="background-color:#A5B68D; color:white; border-color: #A5B68D;">Message Us</a>
+            </nav>
+
+        </div>
+    </header>
+    <hr/>
+
+    <main>
+        <section id="home-page" class="hero-banner">
+            <div class="hero-content">
+                <h1 id="hero-title">
+                    <span class="greeting">Bloom Boldly,</span>
+                    <span class="welcome-message">Live Beautifully.</span>
+                </h1>
+                <p>Your trusted partner for modern floral artistry.</p>
+            </div>
+        </section> 
+
+        <section id="our-profile-page" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    
+                    <div class="about-image"></div>
+
+                    <div class="about-text">
+                        <h2><b>About Us</b></h2>
+                        <p class="subtitle"><i>Where Nature Meets Artistry</i></p>
+                        <p>
+                            <strong>Bloom & Bold</strong> isn't just a typical florist; we are a collective of botanical artists passionate about telling stories through flowers. Since our founding, we have dedicated ourselves to transforming fresh, hand-picked blooms into stunning visual experiences that capture the essence of your most cherished moments.
+                        </p>
+                        <p>
+                            Every stem we choose and every bouquet we craft is handled with utmost care and creativity. We pride ourselves on our bespoke approach, ensuring that whether it’s a grand wedding centerpiece or a simple "just because" gift, it carries a personal touch that words alone cannot convey.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="vision-mission-section">
+            <div class="container vm-main-content">
+                
+                <div class="vm-text-col">
+                    <div>
+                        <p class="vm-label">Our Dream</p>
+                        <p class="vm-description"><i>To be the leading modern florist that redefines gifting, making bold floral artistry accessible to everyone.</i></p>
+                    </div>
+
+                    <div>
+                        <p class="vm-label">Our Promise</p>
+                        <p class="vm-description"><i>To source sustainably, design creatively, and deliver happiness reliably, ensuring every recipient feels truly special.</i></p>
+                    </div>
+                </div>
+
+                <div class="vm-image-col"></div>
+
+            </div>
+        </section>
+
+        <section id="products-page" class="products-section">
+            <div class="container">
+                
+                <h2 class="section-title">Our Products</h2>
+
+                <div class="product-grid">
+                    
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="../assets/fresh-flowers.jpg" alt="Fresh Flowers">
+                        </div>
+                        <h3>Fresh Flowers</h3>
+                    </div>
+
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="../assets/artificial-flowers.jpg" alt="Artificial Flowers">
+                        </div>
+                        <h3>Artificial Flowers</h3>
+                    </div>
+
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="../assets/dried-flowers.jpg" alt="Dried Flowers">
+                        </div>
+                        <h3>Dried Flowers</h3>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="message-us-page" class="message-section">
+            <div class="container">
+
+                <h2 class="section-title"><b>Message Us</b></h2>
+
+                <div class="message-content">
+                    
+                    <div class="form-col">
+                        <form id="message-form" onsubmit="return validateForm()"> <div class="form-group">
+                                <label for="nama">Name</label>
+                                <input type="text" id="nama" name="nama" placeholder="Your Name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tgl_lahir">Date of Birth</label>
+                                <input type="date" id="tgl_lahir" name="tgl_lahir" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Gender</label>
+                                <div class="radio-group">
+                                    <input type="radio" id="Male" name="gender" value="Male" checked>
+                                    <label for="Male" class="radio-label">Male</label>
+
+                                    <input type="radio" id="Female" name="gender" value="Female">
+                                    <label for="Female" class="radio-label">Female</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pesan">Message</label>
+                                <textarea id="pesan" name="pesan" rows="5" placeholder="Write your message here" required></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Submit</button>
+
+                        </form>
+                    </div>
+
+                    <div class="result-col">
+                        <div class="result-box">
+                            <p><strong>Current time :</strong> <span id="current-time">-</span></p>
+                            <br>
+                            <p><strong>Name :</strong> <span id="result-nama">-</span></p>
+                            <p><strong>Date of Birth :</strong> <span id="result-tgl">-</span></p>
+                            <p><strong>Gender :</strong> <span id="result-gender">-</span></p>
+                            <p><strong>Message :</strong> <span id="result-pesan">-</span></p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+    
+
+
+    <footer class="main-footer">
+        <div class="container">
+            <p class="text-center p-4">© 2025 Bloom and Bold. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>
